@@ -2,7 +2,7 @@
 def yes_no(question):
     while True:
         response = input(question).lower()
-
+        # should repeat if users don't enter yes or no
         if response == "yes" or response == "y" or response == "yea":
             return "yes"
         elif response == "no" or response == "n" or response == "nah":
@@ -10,28 +10,24 @@ def yes_no(question):
         else:
             print("Please try again.")
 
-# outputs intstructions
+
+# outputs instructions
 def instructions():
     print('''
     
-    **** Instructions ****
+                  🎲 *~*~*~* Instructions *~*~*~* 🎲
     
-    Roll the dice.  Keep rolling until you get 
-    to 13 (or slightly less).
-    If you go over you lose!
+                          win the game innit
     
-    If the computer goes over you win :)
-    
-    etc
-        
+                              🎲 🎲 🎲
     ''')
 
 
-# Main routine
+# **** Main routine ******
+
+print("🎲🎲 Roll It 13 🎲🎲")
 
 want_instructions = yes_no("Would you like instructions? ")
 
 if want_instructions == "yes":
     instructions()
-
-
